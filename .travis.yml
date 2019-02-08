@@ -3,7 +3,7 @@ services:
     - docker
 
 before_install:
-    - docker build -t andrejschefer/testProjectForCI -f Dockerfile.div .
+    - docker build -t andrejschefer/test-project-for-ci -f Dockerfile.div .
 
 script:
-    -  docker run andrejschefer/testProjectForCI npm run test -- --coverage
+    - docker run andrejschefer/test-project-for-ci npm run test -- --coverage
